@@ -1,9 +1,9 @@
   private readonly IHubContext<TaskNotificationHub,ITaskNotificationHub> _hub;
-
+  private readonly userID;
   public class NotificationHub{
    public NotificationHub( ITaskNotificationHub> task)
    {
-
+      userID=GetCurrentLoggedInUser();
        _hub = task;
 
    }
